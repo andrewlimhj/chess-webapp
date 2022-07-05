@@ -7,7 +7,8 @@
   },
   "main": ".eslintrc.js",
   "scripts": {
-    "build": "webpack --config webpack.prod.js",
+    "heroku-prebuild": "npm install --dev",
+    "build": "webpack --config webpack_conf/webpack.prod.js",
     "start": "node index.js",
     "watch-webpack": "webpack --watch --config webpack_conf/webpack.dev.js",
     "watch": "concurrently \"nodemon index.js\" \"npm run watch-webpack\""
